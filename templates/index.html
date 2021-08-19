@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        UTUK RESUME
+    </title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('form').onsubmit = function() {
+                alert("Thanks for reaching out. I'll get back to you very soon.")
+            };
+        });
+    </script>
+</head>
+<body>
+    <h1>//my resume goes here//</h1>
+
+    <h2>Contact me by filling the following form</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Send message">
+    </form>
+
+</body>
