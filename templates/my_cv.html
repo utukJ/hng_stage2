@@ -3,7 +3,7 @@
 <html>
 <head>
 
-	<title>Uwakmfom Utuk |Email: utukphd@gmail.com|</title>
+	<title>UTUK</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
 	<meta name="keywords" content="" />
@@ -42,7 +42,7 @@
 
 				<div class="yui-u">
 					<div class="contact-info">
-						<!-- for profile picture -->
+						<img src="{% static 'me.jpg' %}" height = "150", width="150">
 					</div><!--// .contact-info -->
 				</div>
 			</div><!--// .yui-gc -->
@@ -108,12 +108,18 @@
 							</div>
 
 							<div class="job">
-								<h2>ZURI TRAINING (DJANGO BACKEND)</h2><br />
-								<h4> April 2021 – July 2021</h4>
+								<a href=https://training.zuri.team><img src="{% static 'zuri.png' %}" height="50" width="50"></a>
+								<a href=https://training.zuri.team><img src="{% static 'i4g.png' %}" height="50" width="50"></a>
+								<h2>ZURI TRAINING (DJANGO BACKEND)</h2><h4> April 2021 – July 2021</h4><br />
 								<h5>• Completed a simple blog application with functional CRUD operations in Django and deployed to Heroku.</h5><br />
 								<h5>• Built API for user authentication and item CRUD for “ANYLEASE” project using Django Rest framework.</h5>
-
 							</div>
+							<div class="job">
+								<a href=https://internship.zuri.team><img src="{% static 'hng.png' %}" height="50" width="50"></a>
+								<a href=https://internship.zuri.team><img src="{% static 'i4g.png' %}" height="50" width="50"></a>
+								<h2>HNG INTERNSHIP (BACKEND TRACK)</h2><h4> August 2021 – October 2021</h4><br />
+								<h5>• Built resume page with contact form </h5><br />
+
 						</div><!--// .yui-u -->
 					</div><!--// .yui-gf -->
 
@@ -143,16 +149,18 @@
 
 		<div id="ft">
 			<p>Uwakmfon J. Utuk &mdash; <a href="Email: utukphd@gmail.com">Email: utukphd@gmail.com</a></p>
+			<br><br><br><br>
+			<h2>Contact me by filling the following form</h2>
+				<form method="post">
+					{% csrf_token %}
+					{{ form.as_p }}
+					<input type="submit" value="Send message">
+				</form>
+			</h2>		
 		</div><!--// footer -->
 	</div><!-- // inner -->
 </div><!--// doc -->
-<h2>Contact me by filling the following form</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Send message">
-    </form>
-</h2>
+
 </body>
 </html>
 
